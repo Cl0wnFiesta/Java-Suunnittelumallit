@@ -4,7 +4,7 @@ import AbstractFactory.interfaces.Lippis;
 public class LippisB implements Lippis{
 
     @Override
-    public String toString(){
+    public String toString(){ 
         return "Bossin Lippis";
     }
 
