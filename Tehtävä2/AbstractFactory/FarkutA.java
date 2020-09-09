@@ -5,7 +5,7 @@ import AbstractFactory.interfaces.Farkut;
 public class FarkutA implements Farkut{
 
     @Override
-    public String toString(){ // toString() method is used to print the object
+    public String toString(){
         return "Addun Farkut";
     }
 }
