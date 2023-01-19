@@ -1,6 +1,8 @@
 package AbstractFactory;
+import AbstractFactory.interfaces.Kenka;
 
-public class Kenka implements Vaatteet{
+public class KenkaA implements Kenka{
+
     @Override
     public String toString(){
         return "Addun Kengät";

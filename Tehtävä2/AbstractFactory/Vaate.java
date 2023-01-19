@@ -1,4 +1,4 @@
 package AbstractFactory;
 
-public interface Vaatteet {
+public interface Vaate {
 }

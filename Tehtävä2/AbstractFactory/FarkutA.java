@@ -1,9 +1,11 @@
 package AbstractFactory;
 
-public class Farkut implements Vaatteet{
+import AbstractFactory.interfaces.Farkut;
+
+public class FarkutA implements Farkut{
+
     @Override
     public String toString(){
         return "Addun Farkut";
     }
-
 }
