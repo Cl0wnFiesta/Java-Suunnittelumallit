@@ -5,7 +5,7 @@ import AbstractFactory.interfaces.Lippis;
 import AbstractFactory.interfaces.Kenka;
 import AbstractFactory.interfaces.Tpaita;
 
-public class AdidasVaatteet extends VaateFactory{
+public class AdidasVaatteet implements VaateFactory{
    
     @Override
     public Farkut pueFarkut() {
