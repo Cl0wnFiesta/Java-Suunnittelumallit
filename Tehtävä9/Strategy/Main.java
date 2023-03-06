@@ -10,9 +10,9 @@ public class Main {
         int[] randomInts = new int[100000];
    
 
-        // fill the array with random integers between 0 and 999 (inclusive)
+        // fill the array with random integers between 0 and 999999 (inclusive)
         for (int i = 0; i < randomInts.length; i++) {
-            randomInts[i] = random.nextInt(1000);
+            randomInts[i] = random.nextInt(100000);
         }
 
         Sort sort = new Sort(new BubbleSort());
