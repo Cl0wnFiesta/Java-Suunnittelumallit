@@ -29,9 +29,9 @@ public class Asiakas extends Thread {
 
     @Override
     public void run() {
-        boolean väärin = false;
-        while (!väärin) {
-            väärin = arvaa();
+        boolean oikein = false;
+        while (!oikein) {
+            oikein = arvaa();
         }
         System.out.println(this.getName() + " arvasi oikein!" + "\n");
     }
