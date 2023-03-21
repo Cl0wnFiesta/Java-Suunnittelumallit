@@ -12,5 +12,5 @@ public class Main {
         for (int i = 0; i < asiakas.length; i++) {
             asiakas[i].start();
         }
-    } 
+    }
 }

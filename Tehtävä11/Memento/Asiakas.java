@@ -1,6 +1,6 @@
 package Tehtävä11.Memento;
 
-public class Asiakas extends Thread{
+public class Asiakas extends Thread {
     private Object obj;
     private Arvuuttaja arvuuttaja;
 
@@ -8,18 +8,18 @@ public class Asiakas extends Thread{
         super(asiakasNumero);
         this.arvuuttaja = new Arvuuttaja();
     }
-    
+
     public void liityPeliin(Arvuuttaja arvuuttaja) {
         this.arvuuttaja = arvuuttaja;
         this.obj = arvuuttaja.liityPeliin();
     }
-    
+
     public synchronized boolean arvaa() {
         synchronized (this.arvuuttaja) {
-        int guess = heitaArvaus();
-        System.out.println(this.getName() + " arvaus: " + guess);
-        boolean arvaus = arvuuttaja.arvaa(obj, guess);
-        return arvaus;
+            int guess = heitaArvaus();
+            System.out.println(this.getName() + " arvaus: " + guess);
+            boolean arvaus = arvuuttaja.arvaa(obj, guess);
+            return arvaus;
         }
     }
 
@@ -28,7 +28,7 @@ public class Asiakas extends Thread{
     }
 
     @Override
-    public void run () {
+    public void run() {
         boolean väärin = false;
         while (!väärin) {
             väärin = arvaa();
