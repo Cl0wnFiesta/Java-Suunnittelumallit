@@ -1,6 +1,6 @@
 public class CEO extends Handler {
 
-    private final double RAISE_LIMIT = 50;
+    private final double RAISE_LIMIT = 5;
 
 
     @Override

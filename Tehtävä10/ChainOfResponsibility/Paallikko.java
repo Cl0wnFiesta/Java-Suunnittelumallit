@@ -5,7 +5,7 @@ public class Paallikko extends Handler {
  
     @Override
     public void handleRequest(Raise raise) {
-        if (raise.getAmount() <= RAISE_LIMIT ) {
+        if (raise.getAmount() < RAISE_LIMIT ) {
             System.out.println("Päälikkö hyväksyy palkankorotuksen " + raise.getAmount() + " %.");
         } else {
             System.out.println("Päälikkö ei voi hyväksyä palkankorotusta " + raise.getAmount() + " %.");
