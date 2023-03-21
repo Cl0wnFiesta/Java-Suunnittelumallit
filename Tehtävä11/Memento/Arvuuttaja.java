@@ -10,33 +10,26 @@ public class Arvuuttaja {
 
         }
         
-        public void setArvaus(int arvaus) {
-            System.out.println("Arvauksesi: " + arvaus);
-            this.arvaus = arvaus;
-        }
-
-        public void arvaa(Object obj) {
+        public boolean arvaa(Object obj, int asiakasArvaus) {
             Memento m = (Memento) obj;
-            if(m.getArvaus() == arvaus) {
-                System.out.println("Arvasit oikein!");
+            if(m.getArvaus() == asiakasArvaus) {
+                System.out.println("\n" + "Arvasit oikein! Luvut olivat: " + m.getArvaus() + " ja " + asiakasArvaus );
+                return true;
             } else {
                 System.out.println("Arvasit väärin!");
+                return false;
             }
         }   
 
         private class Memento {
             private int arvaus;
 
-            public Memento(int arvaus) {
-                this.arvaus = arvaus;
+            public Memento(int state) {
+                this.arvaus = state;
             }
 
             public int getArvaus() {
                 return arvaus;
-            }
-
-            public void setArvaus(int arvaus) {
-                this.arvaus = arvaus;
             }
         }
 }

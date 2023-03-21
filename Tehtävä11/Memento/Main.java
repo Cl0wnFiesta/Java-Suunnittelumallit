@@ -3,16 +3,14 @@ package Tehtävä11.Memento;
 public class Main {
     public static void main(String[] args) {
         Arvuuttaja arvuuttaja = new Arvuuttaja();
-        CareTaker careTaker = new CareTaker();
-        
-        careTaker.saveMemento(arvuuttaja);
-        arvuuttaja.setArvaus((int) (Math.random() * 10));
-        careTaker.getMemento(arvuuttaja);
+        Asiakas[] asiakas = new Asiakas[5];
 
-    /*     while (true) {
-            careTaker.saveMemento(arvuuttaja);
-            arvuuttaja.setArvaus((int) (Math.random() * 10));
-            careTaker.getMemento(arvuuttaja);
-        } */
+        for (int i = 0; i < asiakas.length; i++) {
+            asiakas[i] = new Asiakas("Asiakas " + i + "");
+            asiakas[i].liityPeliin(arvuuttaja);
+        }
+        for (int i = 0; i < asiakas.length; i++) {
+            asiakas[i].start();
+        }
     } 
 }
