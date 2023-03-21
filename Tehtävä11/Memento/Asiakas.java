@@ -6,7 +6,6 @@ public class Asiakas extends Thread {
 
     public Asiakas(String asiakasNumero) {
         super(asiakasNumero);
-        this.arvuuttaja = new Arvuuttaja();
     }
 
     public void liityPeliin(Arvuuttaja arvuuttaja) {
