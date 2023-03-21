@@ -4,12 +4,12 @@ public class Raise {
     private String reason;
 
     public Raise(int percentage, String reason) {
-        this.percentage  = percentage;
+        this.percentage = percentage;
         this.reason = reason;
     }
 
     public int getAmount() {
-        return percentage ;
+        return percentage;
     }
 
     public String getReason() {

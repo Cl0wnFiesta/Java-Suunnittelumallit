@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        Handler lahiesimies = new Lahiesimies();
-        Handler paallikko = new Paallikko();
-        Handler ceo = new CEO();
+        Lahiesimies lahiesimies = new Lahiesimies();
+        Paallikko paallikko = new Paallikko();
+        CEO ceo = new CEO();
 
         lahiesimies.setHander(paallikko);
         paallikko.setHander(ceo);
