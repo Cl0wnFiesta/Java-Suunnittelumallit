@@ -1,6 +1,6 @@
 public class Paallikko extends Handler {
 
-    private final double RAISE_LIMIT = 4;
+    private final int RAISE_LIMIT = 4;
 
     @Override
     public void handleRequest(Raise raise) {

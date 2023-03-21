@@ -1,6 +1,6 @@
 public class Lahiesimies extends Handler {
 
-    private final double RAISE_LIMIT = 2;
+    private final int RAISE_LIMIT = 2;
 
     @Override
     public void handleRequest(Raise raise) {
