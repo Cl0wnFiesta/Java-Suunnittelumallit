@@ -5,7 +5,7 @@ import AbstractFactory.interfaces.Lippis;
 import AbstractFactory.interfaces.Kenka;
 import AbstractFactory.interfaces.Tpaita;
 
-public abstract interface VaateFactory {
+public abstract class VaateFactory {
     public abstract Tpaita puePaita();
     public abstract Farkut pueFarkut();
     public abstract Lippis pueLippis();
