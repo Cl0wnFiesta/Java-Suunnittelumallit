@@ -7,7 +7,10 @@ import AbstractFactory.interfaces.Tpaita;
 
 public abstract class VaateFactory {
     public abstract Tpaita puePaita();
+
     public abstract Farkut pueFarkut();
+
     public abstract Lippis pueLippis();
+
     public abstract Kenka pueKengät();
 }
