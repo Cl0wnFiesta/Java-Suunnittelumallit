@@ -1,8 +1,13 @@
 
 public class Eevee implements IPokemonState {
 
-    public Eevee() {
+    Pokemon p;
+    Visitor v;
+
+    public Eevee(Visitor v, Pokemon p) {
         System.out.println("Eevee has been called to battle");
+        this.v = v;
+        this.p = p;
     }
 
     @Override
@@ -16,15 +21,16 @@ public class Eevee implements IPokemonState {
     public void heal(Pokemon pokemon) {
         System.out.println("Eevee heals");
         pokemon.setHealth(pokemon.getHealth() + 5);
+        pokemon.setExp(pokemon.getExp() + 2);
     }
 
     @Override
     public void block(Pokemon pokemon) {
         System.out.println("Eevee blocks");
+        pokemon.setExp(pokemon.getExp() + 2);
     }
-    
     @Override
-    public void accept(EvolutionVisitor visitor) {
-        visitor.visit(this);
+    public void visit(EvolutionVisitor visitor, Pokemon pokemon) {
+        visitor.visit(this, pokemon);
     }
 }

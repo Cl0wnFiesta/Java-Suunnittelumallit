@@ -1,6 +1,6 @@
 public interface Visitor {
-    public void visit(Umbreon umbreon);
-    public void visit(Jolteon jolteon);
-    public void visit(Eevee eevee);
+    public void visit(Umbreon umbreon, Pokemon pokemon);
+    public void visit(Jolteon jolteon, Pokemon pokemon);
+    public void visit(Eevee eevee, Pokemon pokemon);
 
 }

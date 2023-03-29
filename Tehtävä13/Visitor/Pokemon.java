@@ -1,36 +1,31 @@
+import java.util.List;
+
 public class Pokemon {
-    private IPokemonState state;
     private int health;
     private int exp;
+    EvolutionVisitor evolutionVisitor = new EvolutionVisitor();
+    private IPokemonState state;
 
     public Pokemon() {
-        this.state = new Eevee();
+        this.state = new Eevee(evolutionVisitor, this);
         this.health = 100;
         this.exp = 0;
     }
 
-    /*
-     * public void evolve() {
-     * if (state instanceof Eevee) {
-     * this.state = new Umbreon();
-     * } else if (state instanceof Umbreon) {
-     * this.state = new Jolteon();
-     * } else {
-     * System.out.println("Already at max evolution stage!");
-     * }
-     * }
-     */
-
     public void attack() {
         state.attack(this);
+        this.state.visit(evolutionVisitor, this);
     }
+
 
     public void heal() {
         state.heal(this);
+        this.state.visit(evolutionVisitor, this);
     }
 
     public void block() {
         state.block(this);
+        this.state.visit(evolutionVisitor, this);
     }
 
     public void setState(IPokemonState state) {
@@ -51,7 +46,6 @@ public class Pokemon {
 
     public void setExp(int exp) {
         this.exp = exp;
-        state.accept(new EvolutionVisitor(this));
     }
 
 }

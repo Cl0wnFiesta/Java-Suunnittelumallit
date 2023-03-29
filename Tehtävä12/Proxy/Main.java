@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 interface Image {
     public void displayImage();
-
     public void showData();
 }
 
