@@ -8,7 +8,6 @@ public class Umbreon implements IPokemonState {
         System.out.println("Umbreon attacks");
         pokemon.setHealth(pokemon.getHealth() - 20);
         pokemon.setExp(pokemon.getExp() + 30);
-
     }
 
     @Override
