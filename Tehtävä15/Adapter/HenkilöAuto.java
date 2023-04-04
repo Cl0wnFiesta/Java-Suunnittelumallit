@@ -1,6 +1,17 @@
-public interface HenkilöAuto {
-    // Auto implement HenkilöAuto interface that allows
-    // them to drive and tell their speed
-    public void aja();
-    public void kerroNopeus();
+public class HenkilöAuto {
+    
+    private int nopeus;
+
+    public HenkilöAuto(int v){
+		this.nopeus=v;
+	}
+
+    public int getNopeus() {
+        System.out.println("Ajoneuvo kulkee " + nopeus + "km/h");
+        return nopeus;
+    }
+
+    public void setNopeus(int nopeus) {
+        this.nopeus = nopeus;
+    }
 }

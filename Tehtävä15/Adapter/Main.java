@@ -1,11 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        LeluRekka leluRekka = new Rekka();
         LeluRekka autoAdapter = new AutoAdapter(new Auto());
+        
+        autoAdapter.työnnä(); // 120/h
+        autoAdapter.työnnäKovaa(); // 140km/h
+        autoAdapter.työnnäHitaasti(); // 40km/h
 
-        // LeluRekka ei mene kovaa
-        leluRekka.työnnä(); // 12km/h
-        // LeluRekka käyttäytyy kuin oikea auto, ja menee kovaa
-        autoAdapter.työnnä(); // 140km/h
+        System.out.println(autoAdapter.työnnä().getNopeus()); // Auton perus nopeus
+        System.out.println(autoAdapter.työnnäKovaa().getNopeus()); // Muokattu nopeus
+        System.out.println(autoAdapter.työnnäHitaasti().getNopeus()); // Muokattu nopeus
     }
 }
