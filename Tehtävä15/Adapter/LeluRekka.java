@@ -1,5 +1,7 @@
 public interface LeluRekka {
-    public HenkilöAuto työnnäKovaa();
-    public HenkilöAuto työnnäHitaasti();
-    public HenkilöAuto työnnä();
+    public HenkilöAuto ajaHiljalleen();
+
+    public HenkilöAuto ajaHitaasti();
+
+    public HenkilöAuto aja();
 }
