@@ -1,5 +1,5 @@
 public class Auto {
-    public HenkilöAuto getNopeus() {
-        return new HenkilöAuto(120);
+    public HenkilöAuto aja() {
+        return new HenkilöAuto(120); // Auton perus nopeus
     }
 }
