@@ -3,7 +3,7 @@ public interface IMediator {
 
     public void sendArvostelu(int summa);
 
-    public void lisääHypynTulos(Hyppy hyppy);
+    public void lisääHypynTulos(int pituus, int arvostelu);
 
     public void lisääHyppääjä(Hyppääjä hyppääjä);
 

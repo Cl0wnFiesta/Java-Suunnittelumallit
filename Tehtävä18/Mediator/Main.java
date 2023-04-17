@@ -2,7 +2,7 @@ public class Main {
     public static void main(String[] args) {
         IMediator mediator = new Mediator();
 
-        // Luo Hyppääjät
+        // Luo kolme Hyppääjää
 
         Hyppääjä hyppääjä1 = new Hyppääjä(mediator, "Pekka");
         Hyppääjä hyppääjä2 = new Hyppääjä(mediator, "Matti");
@@ -24,21 +24,21 @@ public class Main {
 
         // Example output:
         // Jussi hyppää!
-        // Mittamies: 98
-        // Kisasihteeri: 59
-        // Arvostelutuomari: 7
+        // Mittamies: 99
+        // Kisasihteeri: 58
+        // Arvostelutuomari: 4
+        // Arvostelutuomari: 15
+        // Arvostelutuomari: 8
         // Arvostelutuomari: 11
-        // Arvostelutuomari: 11
-        // Arvostelutuomari: 17
-        // Arvostelutuomari: 3
-        // Arvostelutuomari yhteensä: 29
-        // Jussi hyppäsi 98 metriä ja sai arvostelun 88
-        // Pituus: 98
-        // Pisteet: 88
+        // Arvostelutuomari: 2
+        // Arvostelutuomari yhteensä: 23
+        // Jussi hyppäsi 99 metriä ja sai arvostelun 81
+        // Pituus: 99
+        // Pisteet: 81
         // Tulostaulu
         // Hyppääjä        Hyppy   Arvostelu               Pituus
-        // Pekka             2        190                    156
-        // Matti             2        212                    144
-        // Jussi             2        171                    98
+        // Pekka             2        209                    136
+        // Matti             2        169                    112
+        // Jussi             2        174                    119
     }
 }

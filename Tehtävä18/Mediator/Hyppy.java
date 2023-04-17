@@ -2,9 +2,8 @@ public class Hyppy {
     private int pituus;
     private int arvostelu;
 
-    public Hyppy(int pituus, int arvostelu) {
-        this.pituus = pituus;
-        this.arvostelu = arvostelu;
+    public Hyppy() {
+
     }
 
     public int getPituus() {

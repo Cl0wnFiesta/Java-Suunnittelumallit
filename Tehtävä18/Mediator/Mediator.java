@@ -9,6 +9,7 @@ public class Mediator implements IMediator {
     private Kisasihteeri kisasihteeri;
     private Tulosrivi tulosrivi;
     private Tulostaulu tulostaulu;
+    private Hyppy hyppy;
 
     public Mediator() {
         this.arvostelutuomari = new Arvostelutuomari(this);
@@ -24,6 +25,7 @@ public class Mediator implements IMediator {
 
     public void hyppää(Hyppääjä hyppääjä) {
         this.currentHyppääjä = hyppääjä;
+        hyppy = new Hyppy();
         currentHyppääjä.hyppää();
         mittamies.mittaa();
     }
@@ -37,7 +39,9 @@ public class Mediator implements IMediator {
         kisasihteeri.saaArvostelu(hypynPisteet);
     }
 
-    public void lisääHypynTulos(Hyppy hyppy) {
+    public void lisääHypynTulos(int pituus, int arvostelu) {
+        hyppy.setPituus(pituus);
+        hyppy.setArvostelu(arvostelu);
         for (Hyppääjä h : hyppääjä) {
             if (h == currentHyppääjä) {
                 currentHyppääjä.receiveTulos(hyppy);

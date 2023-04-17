@@ -13,18 +13,17 @@ public class Kisasihteeri {
         if (hyppy > 100) {
             arvostelu = 60;
             if (hyppy > 130) {
-                arvostelu += (hyppy - 130) / 2;
+                arvostelu += (hyppy - 130) * 2;
             }
         } else if (hyppy < 100) {
-            arvostelu = 60 - ((100 - hyppy) / 2);
+            arvostelu = 60 - ((100 - hyppy) * 2);
         }
         System.out.println("Kisasihteeri: " + arvostelu);
     }
 
     public void saaArvostelu(int summa) {
         arvostelu += summa;
-        Hyppy hyppy = new Hyppy(pituus, arvostelu);
-        mediator.lisääHypynTulos(hyppy);
+        mediator.lisääHypynTulos(pituus, arvostelu);
     }
 
 }
