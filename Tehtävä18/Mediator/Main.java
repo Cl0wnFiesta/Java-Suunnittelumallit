@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) { 
         IMediator mediator = new Mediator();
         Hyppääjä hyppääjä1 = new Hyppääjä(mediator, "Pekka");
         Hyppääjä hyppääjä2 = new Hyppääjä(mediator, "Matti");
